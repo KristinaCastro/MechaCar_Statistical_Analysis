@@ -9,7 +9,7 @@ The MechaCar_mpg.csv dataset contains mpg test results for 50 prototype MechaCar
 <img width="856" alt="Linear_Reg_model" src="https://user-images.githubusercontent.com/81998045/128431401-4d4093ef-a2ef-4a31-8e86-b75293a55069.png">
 
   - Based on the summary calculations, the vehicle length, ground clearance & intercept variables are statistically likely to provide a non-random amount of variance to the mpg values.  
-  - The slope of the linear model is not considered to be zero because the p-value is 5.35e-11 which is significanlty less than the assumed significant level of 0.05%. As a result, we can reject the null hypothesis.
+  - The slope of the linear model is not considered to be zero because the p-value is 5.35e-11 which is significantly less than the assumed significant level of 0.05%. As a result, we can reject the null hypothesis.
   - The linear model predicts the mpg of the MechaCar prototypes effectively, the r-squared value of 0.7149 indicates that about 71% of all mpg predictions will be correct when using this linear model
 
 ## Summary Statistics on Suspension Coils
@@ -22,4 +22,38 @@ In this dataset, the weight capacities of multiple suspension coils were tested 
 ### **Lot Summary:**
 ![lot_summary](https://user-images.githubusercontent.com/81998045/128437052-74b40120-0fb9-4cfd-a538-69fef7036d67.png)
 *The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch.*
+
+When reviewing the total summary of all manufacturing lots, the overall PSI variance is 62.29 which is within the 100 PSI design specification.
+
+When we look at each Lot summary, Lot 1 & Lot 2, the variance of the suspension coils meets the design specifications staying well below the 100 PSI variance requirement with a 0.97 & 7.4 PSI variance. Lot 3 has a variance of 170.28 PSI which exceeds the requirement of 100 PSI as a result Lot 3 manufacturing process is not consistent and not operating within the design specifications. 
+
+## T-Tests on Suspension Coils
+
+A T-test was performed to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
+
+### **Total Summary:**
+<img width="484" alt="t_test1" src="https://user-images.githubusercontent.com/81998045/128447425-caf3b855-7c25-492f-bcb7-0455a220ca31.png">
+
+When compared to the population mean, the PSI across all lots renders a p-value of 0.06 which is above the assumed significance level of 0.05 and therefore is not considered statistically significant, we cannot reject the null hypothesis. This means that there is reason to believe that any variability in the data is due to random chance, and that the sample can be considered representative of the population. 
+
+### **Lot 1 Summary:**
+
+<img width="510" alt="t_test2" src="https://user-images.githubusercontent.com/81998045/128447882-9d8a4fcc-fd2a-4ef2-bd88-7d6266725e0f.png">
+
+When compared to the population mean, the PSI of lot 1 renders a p-value of 1.0 and therefore is not considered statistically significant, we cannot reject the null hypothesis as there is no statistical difference between the observed sample mean and the population mean of 1500.
+
+### **Lot 2 Summary:**
+
+<img width="510" alt="t_test3" src="https://user-images.githubusercontent.com/81998045/128447924-9f55d4dd-2561-4312-b62a-43f96f7a26fa.png">
+
+The PSI of lot 2 shows a p-value of 0.60 and therefore is not considered statistically significant. The observed sample mean is also almost the exact same as the population mean which provides no reason to reject the null hypothesis.
+
+### **Lot 3 Summary:**
+
+<img width="510" alt="t_test4" src="https://user-images.githubusercontent.com/81998045/128447938-754cd5a8-f9aa-42b9-a155-a6fbbc6899ff.png">
+
+The PSI of lot 3 renders a p-value of 0.04 and therefore can be considered statistically significant, since it's below the significance level of 0.05. We can reject the null hypothesis; this means that likely the data is not due to random chance. The PSI for Lot 3 is statistically different from the population mean of 1500 PSI, this specific sample cannot be considered accurately representative of the overall population.
+
+
+
 
