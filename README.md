@@ -1,5 +1,6 @@
 # MechaCar_Statistical_Analysis
 ## Overview 
+AutosRUs’ newest prototype, the MechaCar, is suffering from production troubles that are blocking the manufacturing team’s progress. Using multiple linear regression analysis, summary statistics and t-test we will design a statistical study to review the production data for insights that may help the manufacturing team.
 
 ## Linear Regression to Predict MPG
 
@@ -9,7 +10,7 @@ The MechaCar_mpg.csv dataset contains mpg test results for 50 prototype MechaCar
 <img width="856" alt="Linear_Reg_model" src="https://user-images.githubusercontent.com/81998045/128431401-4d4093ef-a2ef-4a31-8e86-b75293a55069.png">
 
   - Based on the summary calculations, the vehicle length, ground clearance & intercept variables are statistically likely to provide a non-random amount of variance to the mpg values.  
-  - The slope of the linear model is not considered to be zero because the p-value is 5.35e-11 which is significantly less than the assumed significant level of 0.05%. As a result, we can reject the null hypothesis.
+  - The slope of the linear model is not considered to be zero because the p-value is 5.35e-11 which is significantly less than the assumed significant level of 0.05. As a result, we can reject the null hypothesis.
   - The linear model predicts the mpg of the MechaCar prototypes effectively, the r-squared value of 0.7149 indicates that about 71% of all mpg predictions will be correct when using this linear model
 
 ## Summary Statistics on Suspension Coils
@@ -54,6 +55,17 @@ The PSI of lot 2 shows a p-value of 0.60 and therefore is not considered statist
 
 The PSI of lot 3 renders a p-value of 0.04 and therefore can be considered statistically significant, since it's below the significance level of 0.05. We can reject the null hypothesis; this means that likely the data is not due to random chance. The PSI for Lot 3 is statistically different from the population mean of 1500 PSI, this specific sample cannot be considered accurately representative of the overall population.
 
+## Study Design: MechaCar vs Competition
+*Design a statistical study to compare performance of the MechaCar vehicles against performance of vehicles from other manufacturers.*
 
+A statistical study to measure the relationship between car fuel efficacy and type of car brand. We can further our original analysis to see whether there is a statistically significant difference in fuel efficiency when analyzing across different car manufacturers. We would test our performance in different environments and road conditions. We would also need to gather our competitors mpg data for comparison, using the same parameters.
 
+For this study:
+  - Metrics: Avg mpg for similar car styles 
+  - Null Hypothesis: There is no statistical difference between MechaCars mpg dataset and other car manufacturers mpg dataset on the market.
+  - Alternative Hypothesis: The true mean of MechaCars mpg dataset is GREATER than the mean of our competitors fuel efficiency dataset.
+  - Statistical Test to test hypothesis: 
+      - ANOVA - analysis of variance is the fitting statistical test used to compare the means across all samples and determines whether there is a significant difference in at least one sample.
+  - Data needed to run statistical text: Competitors avg mpg data for comparison, using the same parameters, i.e., car type 
 
+If MechaCar is truly considered a fuel efficient car, then the statistical analysis will render as significant, which indicates that there is true value in choosing it over competitors based on fuel efficiency.
